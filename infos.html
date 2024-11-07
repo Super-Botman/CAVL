@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui Sommes Nous</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <style>
+      .presentation {
+        font-size: 1.2em;
+        color: #5c4f91;
+        margin: 20px auto;
+        line-height: 1.6;
+        max-width: 800px;
+        animation: fadeInText 1s ease-in-out;
+      }
+
+      .devise {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ff6655;
+        margin: 20px 0;
+        animation: fadeInText 1.2s ease-in-out;
+      }
+      .delegate-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        animation: fadeUp 1s ease;
+      }
+
+      .delegate-group:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .delegate-item {
+        margin: 10px 0;
+        padding: 15px;
+        border: 2px solid #5c4f91;
+        border-radius: 8px;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .delegate-item:hover {
+        background-color: #f1e8ff;
+        color: #3a2567;
+      }
+
+      .delegate-name {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #3a2567;
+      }
+
+      .delegate-name-Candidature {
+        font-size: 1em;
+        font-weight: italic;
+        color: #524769;
+      }
+
+      .delegate-role {
+        font-size: 0.9em;
+        color: #777;
+        margin-top: 5px;
+      }
+
+      .link {
+        display: block;
+        color: #5c4f91;
+        text-decoration: none;
+        font-size: 1.1em;
+        margin: 5px 0;
+        transition: color 0.3s, transform 0.3s;
+      }
+
+      .link:hover {
+        color: #ff6655;
+        transform: scale(1.05);
+      }
+
+      .placeholder {
+        font-weight: bold;
+        color: #999;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="home-button">🏠 Accueil</a>
+      <h1 class="header-title">Qui Sommes Nous</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Liste des Délégués</h2>
+
+        <div class="delegate-group">
+          <div class="delegate-item">
+            <a href="candidats/ismael_velay.html" class="link">
+              <div class="delegate-name">Ismael Velay</div>
+              <div class="delegate-role">Titulaire</div>
+            </a>
+          </div>
+          <div class="delegate-item">
+            <a href="candidats/anael_maire.html" class="link">
+              <div class="delegate-name">Anael Maire</div>
+              <div class="delegate-role">Suppléant n°1</div>
+            </a>
+          </div>
+          <div class="delegate-item">
+            <a href="contact.html" class="link placeholder">
+              <div class="delegate-name-Candidature">Candidature ouverte</div>
+              <div class="delegate-role">Suppléant n°2</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="delegate-group">
+          <div class="delegate-item">
+            <a href="candidats/aissata_clermont.html" class="link">
+              <div class="delegate-name">Aissata Clermont</div>
+              <div class="delegate-role">Titulaire</div>
+            </a>
+          </div>
+          <div class="delegate-item">
+            <a href="contact.html" class="link placeholder">
+              <div class="delegate-name-Candidature">Candidature ouverte</div>
+              <div class="delegate-role">Suppléant n°1</div>
+            </a>
+          </div>
+          <div class="delegate-item">
+            <a href="contact.html" class="link placeholder">
+              <div class="delegate-name-Candidature">Candidature ouverte</div>
+              <div class="delegate-role">Suppléant n°2</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>De chacun selon ses moyens, à chacun selon ses besoins</p>
+    </footer>
+  </body>
+</html>

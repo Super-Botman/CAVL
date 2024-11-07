@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nous Rejoindre - Notre Organisation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <style>
+   .faq-section {
+      margin-bottom: 40px;
+    }
+    .faq-title {
+      font-size: 2em;
+      color: #3a2567;
+      margin-bottom: 20px;
+    }
+    .faq-item {
+      margin: 10px 0;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-question {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #3a2567;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .faq-answer {
+      display: none;
+      padding: 15px;
+      font-size: 1em;
+      color: #666;
+      line-height: 1.6;
+      border-top: 1px solid #f1e8ff;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .toggle-icon {
+      transition: transform 0.3s;
+    }
+    .faq-item.active .toggle-icon {
+      transform: rotate(180deg);
+    }
+    .form-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #ff6655;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: sticky;
+      top: 20px;
+    }
+    .form-button:hover {
+      background-color: #e65040;
+    }
+    .form-container {
+      margin-top: 20px;
+      width: 100%;
+      display: none;
+      max-width: 100%;
+    }
+    .form-container iframe {
+      width: 100%;
+      height: 100vh; /* Utilise toute la hauteur disponible */
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    @media (max-width: 768px) {
+      .form-container iframe {
+        height: 90vh; /* Ajuste la hauteur pour les écrans plus petits */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="header-title">Nous Rejoindre</h1>
+    <a href="index.html" class="home-button">🏠 Accueil</a>
+  </header>
+
+  <main>
+    <section class="faq-section">
+      <h2 class="faq-title">Petite FAQ :</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Est-ce que j'ai besoin d'être d'une circonscription spécifique ? <span class="toggle-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Malheureusement oui, si tu ne fais pas partie de la circonscription numéro 4 LEGT, tu ne pourras pas ... Mais tu peux toujours voir avec d'autres lycées de ta circonscription ;)
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Est-ce que j'ai besoin de créer ma propre page web pour vous rejoindre ? <span class="toggle-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Non ! Tu n'as qu'un petit formulaire à remplir pour que l'on te connaisse un peu mieux, après quoi nous créerons ta page avec tes instructions ! Pas besoin de savoir coder ;)
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Comment se passe la sélection des suppléants ? <span class="toggle-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Les candidats ne sont pas "sélectionnés" comme pour une compétition, nous cherchont simplement des personne motivatées, avec des idées et des valeurs à elles (même si differente des notres).
+        </div>
+      </div>
+    </section>
+
+    <!-- Bouton pour afficher le formulaire Google -->
+    <button class="form-button" onclick="toggleForm()">Candidater</button>
+
+    <!-- Conteneur pour intégrer le formulaire Google -->
+    <div class="form-container" id="formContainer">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekxeLC6IWw8oX8eMIDOF9FBbJMXnnZwG4if6hAPXH0ytpUXw/viewform?embedded=true" loading="eager">Chargement…</iframe>
+    </div>
+
+    <!-- Bouton Home -->
+  </main>
+
+  <footer>
+    <p>&copy; 2024 - MAIRE Anael | Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      faqItem.classList.toggle('active');
+    }
+
+    function toggleForm() {
+      const formContainer = document.getElementById('formContainer');
+      formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

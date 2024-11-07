@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <style>
+        li.card {
+          background-color: transparent;
+          perspective: 1000px;
+        }
+
+        .card-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+        }
+
+        .card:hover .card-content {
+          transform: rotateY(180deg);
+        }
+
+        .card:hover .card-header {
+          opacity: 0;
+        }
+
+        .card-text {
+          transform: rotateY(180deg);
+          text-align: left;
+          padding: 5%;
+        }
+
+        .card-header {
+          text-align: center;
+        }
+
+        .card-text,
+        .card-header {
+          transition: opacity 0.8s;
+          font-size: 1em;
+          color: #666;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          position: absolute;
+        }
+        .card:hover {
+          transform: scale(1.05);
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        .sections {
+          .card-container {
+            li {
+              flex: 10%;
+              list-style: none;
+              margin-bottom: 20px;
+            }
+          }
+          
+          ul {
+            text-align: left;
+            li {
+              margin-bottom: 10px;
+              list-style: none;
+            }
+            li ul li {
+              list-style: disc;
+              margin-left: 50px;
+              margin-bottom: 0px;
+            }
+          }
+        }
+
+        @media screen and (min-width: 800px) {
+          .card {
+            position: relative;
+          }
+        }
+
+        .program {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    </div>
+    <header>
+      <h1 class="header-title">Notre Programme</h1>
+      <a href="index.html" class="home-button">🏠 Accueil</a>
+    </header>
+
+    <main>
+      <div class="axes sections">
+        <h2 class="title">LES AXES DE NOTRE CANDIDATURE</h2>
+        <ul class="card-container">
+          <li class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">🏫</div>
+                <h3 class="card-title">SOCIALE ET SCOLAIRE</h3>
+              </div>
+              <p class="card-text">Renforcer le bien-être des élèves et du personnel en améliorant leurs conditions de travail.</p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">🔒</div>
+                <h3 class="card-title">SENSIBILISATION</h3>
+              </div>
+              <p class="card-text">Sensibiliser autour de la vie privée et de la sécurité sur Internet.</p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">👥</div>
+                <h3 class="card-title">FORMATION CIVIQUE</h3>
+              </div>
+              <p class="card-text">Eclairer les futures électeur.rices sur leurs choix.</p>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card-content">
+              <div class="card-header">
+                <div class="card-icon">🌽</div>
+                <h3 class="card-title">ECOLOGIE</h3>
+              </div>
+              <p class="card-text">En montagne, les effets du changement climatique sont particulièrement perceptibles. Il est impératif de préserver nos espaces de loisirs afin de garantir la pérennité de nos activités de plein air.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="program sections">
+        <h2 class="title">NOTRE PROGRAMME</h2>
+        <ul class="list">
+          <li>
+            <h3 class="card-title">SOCIALE ET SCOLAIRE</h3>
+            <ul>
+              <li>Mettre en place un dialogue entre lycéens et les membres du personnel des établissements.</li>
+              <li>Offrir un soutien au personnel face à d'éventuelles grèves.</li>
+            </ul>
+          </li>
+          <li>
+            <h3 class="card-title"><i class="fa-solid fa-lock"></i> SENSIBILISATION</h3>
+            <ul>
+              <li>Solliciter la participation d'associations spécialisées afin de fournir une introduction au domaine du hacking.</li>
+              <li>Créations de visuels pour alerter et prévenir des risques.</li>
+            </ul>
+          </li>
+          <li>
+            <h3 class="card-title"><i class="fa-solid fa-user"></i> FORMATION CIVIQUE</h3>
+            <ul>
+              <li>Organisation de groupes de discussion pour aborder l'actualité et les questions politiques.</li>
+              <li>Création de supports visuels visant à initier les élèves aux différents partis politiques, incluant un récapitulatif de leur histoire et de leur idéologie.</li>
+            </ul>
+          </li>
+          <li>
+            <h3 class="card-title"><i class="fa-solid fa-leaf"></i> ECOLOGIE</h3>
+            <ul>
+              <li>Mise en place d'actions en collaboration avec la LPO pour informer, sensibiliser et agir en faveur de l'environnement.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

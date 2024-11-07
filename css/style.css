@@ -1,0 +1,223 @@
+:root {
+  --purple: #5c4f91;
+  --bg: #f3f1fa;
+  --white: #dcd0ff;
+  --orange: #ff6655;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(135deg, #3a2567, var(--purple));
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInHeader 1.5s ease-out;
+}
+
+.header-title {
+  font-size: 2.8em;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.subtitle {
+  color: var(--white);
+  font-size: 1.2em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+main {
+  margin-top: 40px;
+  width: 90%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 40vw;
+  min-width: 320px;
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #3a2567;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.card-icon {
+  text-align: center;
+  font-size: 3em;
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+.cta-button {
+  margin-top: 30px;
+  padding: 10px 25px;
+  background-color: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #e65040;
+}
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--orange);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #ff4533;
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--orange);
+  margin-bottom: 20px;
+  animation: slideDown 1.2s ease-in-out;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 1em;
+  color: #5c4f91;
+  background-color: #f1e8ff;
+  width: 100%;
+  text-align: center;
+  animation: fadeInFooter 2s ease;
+}
+
+footer p {
+  margin: 5px;
+}
+
+@keyframes flipCard {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
