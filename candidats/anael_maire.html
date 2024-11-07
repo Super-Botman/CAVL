@@ -1,96 +1,283 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anaël Maire - Présentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="../css/candidats.css" type="text/css" media="all">
-  </head>
-  <body>
-    <header>
-      <a href="../infos.html" class="home-button">🏠 Accueil</a>
-      <h1 class="header-title">Anaël Maire</h1>
-    </header>
-
-    <main>
-      <!-- À propos de moi -->
-      <section class="section">
-        <h2>🌟 À propos de moi</h2>
-        <p>Je suis Anaël Maire, étudiant en Seconde Générale et Technologique au lycée d'Embrun (Honoré-Romane). Passionné par l’engagement étudiant, je m'implique activement dans la vie de mon établissement et de ma communauté.</p>
-        <p>Avec Ismaël, j'ai également créé ce site, et le formulaire associé, dans le but de rendre notre programme accessible et interactif pour tous.</p>
-      </section>
-
-      <!-- Expérience -->
-      <section class="section">
-        <h2>📚 Expérience</h2>
-        <div class="section-content">
-          <ul>
-            <li>Délégué de classe depuis la 6e, assistant à tous les conseils de classe.</li>
-            <li>Secrétaire général du CVL, facilitant la communication entre établissements.</li>
-            <li>Suppléant au conseil d'administration, au CESCE, au conseil de discipline et au comité d'hygiène.</li>
-            <li>Suppléant d'Ismaël, ce qui renforce notre collaboration et notre efficacité en travail d'équipe.</li>
-            <li>Conférencier en mathématiques et participant à des concours d'éloquence.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Mes Valeurs -->
-      <section class="section">
-        <h2>🌱 Mes Valeurs</h2>
-        <div class="section-content">
-          <button class="value-button" onclick="toggleDescription(this)">Entraide</button>
-          <p class="description">L’entraide est essentielle pour construire un environnement de confiance où chacun peut réussir.</p>
-
-          <button class="value-button" onclick="toggleDescription(this)">Santé</button>
-          <p class="description">Promouvoir la santé physique et mentale pour le bien-être de tous.</p>
-
-          <button class="value-button" onclick="toggleDescription(this)">Écoute</button>
-          <p class="description">Être à l’écoute de chacun, pour comprendre et agir avec empathie.</p>
-
-          <button class="value-button" onclick="toggleDescription(this)">Sport</button>
-          <p class="description">Le sport, un pilier pour le bien-être physique et mental, et une source de motivation.</p>
-
-          <button class="value-button" onclick="toggleDescription(this)">Réussite</button>
-          <p class="description">La réussite est un objectif commun que je souhaite encourager et accompagner.</p>
-
-          <button class="value-button" onclick="toggleDescription(this)">Sérénité</button>
-          <p class="description">Créer un environnement serein où chacun peut évoluer sans pression excessive.</p>
-        </div>
-      </section>
-
-      <!-- Mes Objectifs -->
-      <section class="section">
-        <h2>🎯 Mes Objectifs</h2>
-        <div class="section-content">
-          <button class="objective-button" onclick="toggleDescription(this)">Éducation sûre et sereine</button>
-          <p class="description">Garantir un environnement éducatif sûr et apaisant pour l’épanouissement de tous.</p>
-
-          <button class="objective-button" onclick="toggleDescription(this)">Améliorer la qualité de vie</button>
-          <p class="description">Agir pour une meilleure qualité de vie, en réduisant les stress et en favorisant l'équilibre.</p>
-
-          <button class="objective-button" onclick="toggleDescription(this)">Réduire la charge mentale grâce au sport</button>
-          <p class="description">Utiliser le sport comme un outil pour alléger le stress et encourager la résilience.</p>
-
-          <button class="objective-button" onclick="toggleDescription(this)">Développer la citoyenneté</button>
-          <p class="description">Encourager chacun à devenir un citoyen actif et engagé.</p>
-
-          <button class="objective-button" onclick="toggleDescription(this)">Faciliter l'accès aux formations de premiers secours</button>
-          <p class="description">Permettre à tous d'accéder facilement à des formations de premiers secours.</p>
-
-          <button class="objective-button" onclick="toggleDescription(this)">Promouvoir le bien-être numérique</button>
-          <p class="description">Sensibiliser aux impacts du numérique pour un usage équilibré et sain.</p>
-        </div>
-      </section>
-    </main>
-
-    <iframe src="../footer.html" style=""></iframe>
-    <script>
-    function toggleDescription(button) {
-      const description = button.nextElementSibling;
-      description.style.display = description.style.display === 'block' ? 'none' : 'block';
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anaël Maire - Présentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
     }
-    </script>
-  </body>
+    body {
+      background-color: #f9f8fc;
+      color: #5c4f91;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #3a2567, #5c4f91);
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .header-title {
+      font-size: 2.5em;
+      color: #fff;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    main {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 800px;
+      flex-grow: 1;
+    }
+    .section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    .section h2 {
+      font-size: 1.8em;
+      color: #3a2567;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .card {
+      background-color: transparent;
+      width: 150px;
+      height: 180px;
+      perspective: 1000px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .card:hover .card-content, .card:focus-within .card-content {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .card-front {
+      background-color: #e6e1f5;
+      color: #3a2567;
+      font-size: 1.2em;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .card-back {
+      background-color: #5c4f91;
+      color: #fff;
+      transform: rotateY(180deg);
+      padding: 10px;
+      text-align: center;
+      font-size: 1em;
+      border-radius: 10px;
+    }
+    .card-icon {
+      font-size: 2em;
+      margin-bottom: 8px;
+    }
+    .card-description {
+      font-size: 0.9em;
+      padding: 5px;
+    }
+    .home-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #5c4f91;
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .home-button:hover {
+      background-color: #3a2567;
+    }
+    footer {
+      padding: 20px;
+      font-size: 1em;
+      color: #5c4f91;
+      background-color: #f1e8ff;
+      width: 100%;
+      text-align: center;
+      margin-top: auto;
+    }
+    footer blockquote {
+      font-style: italic;
+      margin-top: 10px;
+      color: #3a2567;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../infos.html" class="home-button">🏠 Accueil</a>
+    <h1 class="header-title">Anaël Maire</h1>
+  </header>
+
+  <main>
+    <!-- À propos de moi -->
+    <section class="section">
+      <h2>🌟 À propos de moi</h2>
+      <p>Je suis Anaël Maire, étudiant en Seconde Générale et Technologique au lycée d'Embrun (Honoré-Romane). Passionné par l’engagement étudiant, je m'implique activement dans la vie de mon établissement et de ma communauté.</p>
+      <p>Avec Ismaël, j'ai également créé ce site et le formulaire associé, dans le but de rendre notre programme accessible et interactif pour tous.</p>
+    </section>
+
+    <!-- Mes Valeurs -->
+    <section class="section">
+      <h2>🌱 Mes Valeurs</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">🤝</div>
+              <h3 class="card-title">Entraide</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">L’entraide est essentielle pour construire un environnement de confiance où chacun peut réussir.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">❤️</div>
+              <h3 class="card-title">Santé</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Promouvoir la santé physique et mentale pour le bien-être de tous.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">👂</div>
+              <h3 class="card-title">Écoute</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Être à l’écoute de chacun, pour comprendre et agir avec empathie.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">⚽</div>
+              <h3 class="card-title">Sport</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Le sport, un pilier pour le bien-être physique et mental, et une source de motivation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mes Objectifs -->
+    <section class="section">
+      <h2>🎯 Mes Objectifs</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">🏫</div>
+              <h3 class="card-title">Éducation sûre</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Garantir un environnement éducatif sûr et apaisant pour l’épanouissement de tous.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">🌿</div>
+              <h3 class="card-title">Qualité de vie</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Améliorer la qualité de vie en réduisant le stress et en favorisant l'équilibre.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">🗣️</div>
+              <h3 class="card-title">Citoyenneté</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Encourager chacun à devenir un citoyen actif et engagé.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-face card-front">
+              <div class="card-icon">💻</div>
+              <h3 class="card-title">Bien-être numérique</h3>
+            </div>
+            <div class="card-face card-back">
+              <p class="card-description">Promouvoir un usage équilibré du numérique pour une meilleure qualité de vie.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <blockquote>De chacun selon ses moyens, à chacun selon ses besoins</blockquote>
+  </footer>
+</body>
 </html>
