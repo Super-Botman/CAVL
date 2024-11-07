@@ -6,6 +6,7 @@
    padding: 20px;
    text-align: left;
    animation: fadeIn 0.8s ease-in-out;
+   width: 90%;
  }
 
  .section h3 {
