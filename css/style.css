@@ -46,7 +46,8 @@ header {
 
 main {
   margin-top: 40px;
-  width: 90%;
+  width: 90vw;
+  height: 100vh;
 }
 
 .card-container {
@@ -136,6 +137,8 @@ footer {
   width: 100%;
   text-align: center;
   animation: fadeInFooter 2s ease;
+  position: fixed;
+  bottom: 0;
 }
 
 footer p {
