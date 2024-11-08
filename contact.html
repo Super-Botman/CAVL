@@ -50,114 +50,28 @@
     .faq-item.active .toggle-icon {
       transform: rotate(180deg);
     }
-    .form-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #ff6655;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.2em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      position: sticky;
-      top: 20px;
-    }
-    .form-button:hover {
-      background-color: #e65040;
-    }
     .form-container {
-      margin-top: 20px;
       width: 100%;
-      display: none;
       max-width: 100%;
-    }
-    .form-container iframe {
+      border: none;
       width: 100%;
-      height: 100vh; /* Utilise toute la hauteur disponible */
+      height: 70vh;
       border: none;
       border-radius: 8px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    @media (max-width: 768px) {
-      .form-container iframe {
-        height: 90vh; /* Ajuste la hauteur pour les écrans plus petits */
-      }
     }
     </style>
   </head>
   <body>
     <header>
-      <h1 class="header-title">Nous Rejoindre</h1>
+      <h1 class="header-title">Nous Contacter</h1>
       <a href="index.html" class="home-button">🏠 Accueil</a>
     </header>
 
     <main>
-      <section class="faq-section">
-        <h2 class="faq-title">Petite FAQ :</h2>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            🗺️ Est-ce que j'ai besoin d'être d'une circonscription spécifique ? <span class="toggle-icon">▼</span>
-          </div>
-          <div class="faq-answer">
-            Malheureusement oui, si tu ne fais pas partie de la circonscription numéro 4 LEGT, tu ne pourras pas ... Mais tu peux toujours voir avec d'autres lycées de ta circonscription ;)
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            🧑‍💻 Est-ce que j'ai besoin de créer ma propre page web pour vous rejoindre ? <span class="toggle-icon">▼</span>
-          </div>
-          <div class="faq-answer">
-            Non ! Tu n'as qu'un petit formulaire à remplir pour que l'on te connaisse un peu mieux, après quoi nous créerons ta page avec tes instructions ! Pas besoin de savoir coder ;)
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            🏆 Comment se passe la sélection des suppléants ? <span class="toggle-icon">▼</span>
-          </div>
-          <div class="faq-answer">
-            Les candidats ne sont pas "sélectionnés" comme pour une compétition, nous cherchont simplement des personne motivatées, avec des idées et des valeurs à elles (même si differente des notres).
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            😔 J'ai peur de me sentir inutile en vous rejoignant en tant que suppléant ... <span class="toggle-icon">▼</span>
-          </div>
-          <div class="faq-answer">
-            Bien sûr que non ! Chez nous, tout le monde est important ! Même, et surtout, les suppléants, car nos titulaires portent la candidature COMMUNE, et chacun a un rôle à jouer et des projets à réaliser. De plus, la communication inter-lycéens en sera grandement améliorée et notre poids politique accru. 😉
-          </div>
-        </div>
-      </section>
-
-      <!-- Bouton pour afficher le formulaire Google -->
-      <button class="form-button" onclick="toggleForm()">Candidater</button>
-
-      <!-- Conteneur pour intégrer le formulaire Google -->
-      <div class="form-container" id="formContainer">
-        <iframe src="https://framaforms.org/nous-rejoindre-1731006677" width="100%" height="800" border="0"></iframe>
-      </div>
-
-      <!-- Bouton Home -->
+      <iframe class="form-container" src="https://framaforms.org/nous-contacter-1731006677" width="100%" height="800" border="0"></iframe>
     </main>
 
-    <iframe src="footer.html" style=""></iframe>
-
-    <script>
-    function toggleFaq(element) {
-      const faqItem = element.parentElement;
-      faqItem.classList.toggle('active');
-    }
-
-    function toggleForm() {
-      const formContainer = document.getElementById('formContainer');
-      formContainer.style.display = formContainer.style.display === 'none' ? 'block' : 'none';
-    }
-    </script>
+    <iframe class="footer" src="footer.html" style=""></iframe>
   </body>
 </html>
